@@ -26,23 +26,23 @@ surfaces/0 = {
 [sub_resource type="CapsuleShape" id=2]
 radius = 0.5
 
-[sub_resource type="AnimationNodeAnimation" id=4]
+[sub_resource type="AnimationNodeAnimation" id=3]
 animation = "Run"
 
-[sub_resource type="AnimationNodeBlend2" id=3]
+[sub_resource type="AnimationNodeBlend2" id=4]
 
 [sub_resource type="AnimationNodeAnimation" id=5]
 
 [sub_resource type="AnimationNodeBlendTree" id=6]
 graph_offset = Vector2( 447.207, 30.7367 )
-nodes/Idle/node = SubResource( 4 )
+nodes/Idle/node = SubResource( 3 )
 nodes/Idle/position = Vector2( 570, 100 )
-nodes/Idle_Run/node = SubResource( 3 )
+nodes/Idle_Run/node = SubResource( 4 )
 nodes/Idle_Run/position = Vector2( 760, 60 )
 nodes/Run/node = SubResource( 5 )
 nodes/Run/position = Vector2( 400, 110 )
 nodes/output/position = Vector2( 950, 50 )
-node_connections = [ "Idle_Run", 0, "Idle", "Idle_Run", 1, "Run", "output", 0, "Idle_Run" ]
+node_connections = [ "output", 0, "Idle_Run", "Idle_Run", 0, "Idle", "Idle_Run", 1, "Run" ]
 
 [node name="Character" type="KinematicBody"]
 script = ExtResource( 7 )
